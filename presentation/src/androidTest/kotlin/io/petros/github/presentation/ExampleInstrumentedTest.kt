@@ -11,7 +11,7 @@ class ExampleInstrumentedTest {
 
     @Test
     fun useAppContext() {
-        assertEquals("io.petros.github.app", InstrumentationRegistry.getTargetContext().packageName)
+        assertEquals("io.petros.github.debug", InstrumentationRegistry.getTargetContext().packageName)
     }
 
 }
