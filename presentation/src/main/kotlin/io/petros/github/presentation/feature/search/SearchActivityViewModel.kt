@@ -13,8 +13,8 @@ class SearchActivityViewModel @Inject constructor(
 
     val searchResultsObservable = MutableLiveData<SearchResults>()
 
-    fun search() {
-        searchUseCase.execute(SearchSubscriber(searchResultsObservable))
+    fun search(searchTerm: String) {
+        searchUseCase.execute(SearchSubscriber(searchResultsObservable), SearchUseCase.Params.with(searchTerm))
     }
 
 }

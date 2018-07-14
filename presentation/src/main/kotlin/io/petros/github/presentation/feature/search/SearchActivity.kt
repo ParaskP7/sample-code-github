@@ -33,19 +33,19 @@ class SearchActivity : BaseActivity<SearchActivityViewModel>(), SearchToolbarCal
     }
 
     private fun showSearchResults(searchResults: SearchResults) {
-        tv_search_result.text = searchResults.text
+        tv_search_result.text = searchResults.repositories.size.toString()
     }
 
     /* CALLBACK */
 
     override fun onSearch(searchTerm: String) {
-        search()
+        search(searchTerm)
     }
 
     /* DATA LOADING */
 
-    private fun search() {
-        viewModel.search()
+    private fun search(searchTerm: String) {
+        viewModel.search(searchTerm)
     }
 
     /* CONTRACT */

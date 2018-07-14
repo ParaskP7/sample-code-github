@@ -1,14 +1,17 @@
 package io.petros.github.data.repository.search
 
+import io.petros.github.data.network.WebService
 import io.petros.github.domain.model.search.SearchResults
 import io.petros.github.domain.repository.search.SearchRepository
 import io.reactivex.Single
 import javax.inject.Inject
 
-class SearchRepositoryImpl @Inject constructor() : SearchRepository {
+class SearchRepositoryImpl @Inject constructor(
+    private val webService: WebService
+) : SearchRepository {
 
-    override fun search(): Single<SearchResults> {
-        return Single.just(SearchResults("GitHub Search Results!"))
+    override fun search(searchTerm: String): Single<SearchResults> {
+        return webService.search(searchTerm)
     }
 
 }

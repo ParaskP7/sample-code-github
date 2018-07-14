@@ -10,10 +10,22 @@ import javax.inject.Inject
 class SearchUseCase @Inject constructor(
     private val searchRepository: SearchRepository,
     rxSchedulers: RxSchedulers
-) : UseCaseSingle<SearchResults, Unit>(rxSchedulers) {
+) : UseCaseSingle<SearchResults, SearchUseCase.Params>(rxSchedulers) {
 
-    override fun buildUseCaseObservable(params: Unit): Single<SearchResults> {
-        return searchRepository.search()
+    override fun buildUseCaseObservable(params: Params): Single<SearchResults> {
+        return searchRepository.search(params.searchTerm)
+    }
+
+    data class Params constructor(val searchTerm: String) {
+
+        companion object {
+
+            fun with(searchTerm: String): Params {
+                return Params(searchTerm)
+            }
+
+        }
+
     }
 
 }
