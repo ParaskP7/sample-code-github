@@ -22,6 +22,8 @@ apply from: '../config/gradle/dependencies/dependency_updates.gradle'
 
 dependencies {
     implementation deps.kotlin.jre
+    implementation deps.di.dagger
+    kapt deps.di.daggerCompiler
 
     testImplementation deps.test.junit
 }
