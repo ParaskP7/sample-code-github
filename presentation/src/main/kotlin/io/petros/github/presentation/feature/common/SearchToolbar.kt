@@ -31,7 +31,7 @@ class SearchToolbar : AppBarLayout {
 
     private fun search(searchTerm: String): Boolean {
         searchToolbarCallback.onSearch(searchTerm)
-        return true
+        return false
     }
 
 }
