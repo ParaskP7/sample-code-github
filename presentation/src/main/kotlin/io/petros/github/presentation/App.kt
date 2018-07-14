@@ -5,13 +5,17 @@ import android.os.Build
 import android.os.StrictMode
 import com.squareup.leakcanary.LeakCanary
 import io.petros.github.BuildConfig
+import io.petros.github.R
+import timber.log.Timber
 
 class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
         if (!initLeakCanary()) return
+        initLogging()
         initStrictMode()
+        Timber.i("${getString(R.string.app_name)} created.")
     }
 
     private fun initLeakCanary(): Boolean {
@@ -23,10 +27,18 @@ class App : Application() {
         }
     }
 
+    private fun initLogging() {
+        if (BuildConfig.DEBUG) {
+            Timber.plant(Timber.DebugTree())
+            Timber.v("${javaClass.simpleName} logging initialised.")
+        }
+    }
+
     private fun initStrictMode() {
         if (BuildConfig.DEBUG) {
             setThreadPolicyToStrictMode()
             setVmPolicyToStrictMode()
+            Timber.v("${javaClass.simpleName} strict mode initialised.")
         }
     }
 

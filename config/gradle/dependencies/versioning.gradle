@@ -8,13 +8,16 @@ ext.versions = [
         detekt_plugin    : '1.0.0.RC7',
 
         // LeakCanary
-        'leakcanary'      : '1.5.4',
+        'leakcanary'     : '1.5.4',
 
         // IMPLEMENTATION // ************************************************************************************************
 
         // Android
         support_library  : '27.1.1',
         constraint_layout: '1.1.2',
+
+        // Logging
+        timber           : '4.7.1',
 
         // TEST IMPLEMENTATION // *******************************************************************************************
 
