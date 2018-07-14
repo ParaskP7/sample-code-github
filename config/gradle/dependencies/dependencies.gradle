@@ -18,6 +18,7 @@ ext.deps = [
         'module'     : [
                 'domain': project(':domain'),
                 'data'  : project(':data'),
+                'test'  : project('test'),
         ],
 
         // IMPLEMENTATION // ************************************************************************************************
@@ -66,7 +67,12 @@ ext.deps = [
         // TEST IMPLEMENTATION // *******************************************************************************************
 
         'test'       : [
-                'junit': "junit:junit:$versions.junit",
+                'junit'  : "junit:junit:$versions.junit",
+                'assertj': "org.assertj:assertj-core:$versions.assertj",
+        ],
+
+        'mock'       : [
+                'mockitoKotlin': "com.nhaarman:mockito-kotlin:$versions.mockito_kotlin",
         ],
 
         // ANDROID TEST IMPLEMENTATION // ***********************************************************************************
@@ -85,13 +91,15 @@ ext.deps = [
 ext.excludedDeps = [
 
         'group' : [
-                'androidSupport': 'com.android.support',
+                'androidSupport' : 'com.android.support',
+                'jetbrainsKotlin': 'org.jetbrains.kotlin',
         ],
 
         'module': [
                 'supportV4'         : 'support-v4',
                 'supportAnnotations': 'support-annotations',
                 'supportMediaCompat': 'support-media-compat',
+                'kotlinReflect'     : 'kotlin-reflect',
         ],
 
 ]

@@ -23,15 +23,15 @@ ext.versions = [
         dagger           : "2.16",
 
         // Rx
-        rxjava            : '2.1.16',
-        rxandroid         : '2.0.2',
+        rxjava           : '2.1.16',
+        rxandroid        : '2.0.2',
 
         // Network
-        gson                  : "2.8.5",
-        okhttp                : "3.10.0",
+        gson             : "2.8.5",
+        okhttp           : "3.10.0",
 
         // Rest
-        retrofit              : "2.4.0",
+        retrofit         : "2.4.0",
 
         // Logging
         timber           : '4.7.1',
@@ -40,6 +40,10 @@ ext.versions = [
 
         // Test
         junit            : '4.12',
+        assertj          : '3.10.0',
+
+        // Mock
+        mockito_kotlin   : '1.6.0',
 
         // ANDROID TEST IMPLEMENTATION // ***********************************************************************************
 
