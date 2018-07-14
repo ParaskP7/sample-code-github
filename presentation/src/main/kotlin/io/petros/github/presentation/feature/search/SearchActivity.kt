@@ -1,10 +1,9 @@
 package io.petros.github.presentation.feature.search
 
+import android.arch.lifecycle.Observer
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.view.Menu
-import android.view.MenuItem
 import io.petros.github.R
+import io.petros.github.domain.model.search.SearchResults
 import io.petros.github.presentation.feature.BaseActivity
 import kotlinx.android.synthetic.main.activity_search.*
 
@@ -12,28 +11,30 @@ class SearchActivity : BaseActivity<SearchActivityViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setSupportActionBar(toolbar)
-
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
+        initObservers()
+        search()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
+    /* OBSERVERS */
+
+    private fun initObservers() {
+        observeSearchResult()
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_settings -> true
-            else -> super.onOptionsItemSelected(item)
-        }
+    private fun observeSearchResult() {
+        viewModel.searchResultsObservable.observe(this, Observer {
+            it?.let { showSearchResults(it) }
+        })
+    }
+
+    private fun showSearchResults(searchResults: SearchResults) {
+        tv_search_result.text = searchResults.text
+    }
+
+    /* DATA LOADING */
+
+    private fun search() {
+        viewModel.search()
     }
 
     /* CONTRACT */

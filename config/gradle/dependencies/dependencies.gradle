@@ -27,6 +27,7 @@ ext.deps = [
         ],
 
         'support'    : [
+                'appCompat'       : "com.android.support:appcompat-v7:$versions.support_library",
                 'design'          : "com.android.support:design:$versions.support_library",
                 'constraintLayout': "com.android.support.constraint:constraint-layout:$versions.constraint_layout",
         ],
@@ -40,6 +41,11 @@ ext.deps = [
                 'daggerCompiler'        : "com.google.dagger:dagger-compiler:$versions.dagger",
                 'daggerAndroid'         : "com.google.dagger:dagger-android-support:$versions.dagger",
                 'daggerAndroidProcessor': "com.google.dagger:dagger-android-processor:$versions.dagger",
+        ],
+
+        'rx'         : [
+                'rxjava'   : "io.reactivex.rxjava2:rxjava:$versions.rxjava",
+                'rxandroid': "io.reactivex.rxjava2:rxandroid:$versions.rxandroid",
         ],
 
         'logging'    : [
