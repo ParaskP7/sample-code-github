@@ -8,7 +8,7 @@ import io.petros.github.R
 import io.petros.github.presentation.feature.BaseActivity
 import kotlinx.android.synthetic.main.activity_search.*
 
-class SearchActivity : BaseActivity() {
+class SearchActivity : BaseActivity<SearchActivityViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,5 +39,7 @@ class SearchActivity : BaseActivity() {
     /* CONTRACT */
 
     override fun constructContentView() = R.layout.activity_search
+
+    override fun constructViewModel() = SearchActivityViewModel::class.java
 
 }
