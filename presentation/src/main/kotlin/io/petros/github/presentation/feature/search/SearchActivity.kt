@@ -5,7 +5,7 @@ import android.os.Bundle
 import io.petros.github.R
 import io.petros.github.domain.model.search.SearchResults
 import io.petros.github.presentation.feature.BaseActivity
-import io.petros.github.presentation.feature.common.SearchToolbarCallback
+import io.petros.github.presentation.feature.common.toolbar.SearchToolbarCallback
 import kotlinx.android.synthetic.main.activity_search.*
 
 class SearchActivity : BaseActivity<SearchActivityViewModel>(), SearchToolbarCallback {

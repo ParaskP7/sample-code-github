@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".presentation.feature.search.SearchActivity">
 
-    <io.petros.github.presentation.feature.common.SearchToolbar
+    <io.petros.github.presentation.feature.common.toolbar.SearchToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="66dp"

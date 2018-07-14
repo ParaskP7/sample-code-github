@@ -1,4 +1,4 @@
-package io.petros.github.presentation.feature.common
+package io.petros.github.presentation.feature.common.toolbar
 
 import android.content.Context
 import android.support.design.widget.AppBarLayout
@@ -6,7 +6,7 @@ import android.util.AttributeSet
 import android.view.inputmethod.EditorInfo
 import io.petros.github.R
 import io.petros.github.presentation.feature.inflate
-import kotlinx.android.synthetic.main.search_toolbar.view.*
+import kotlinx.android.synthetic.main.toolbar_search.view.*
 
 class SearchToolbar : AppBarLayout {
 
@@ -17,7 +17,7 @@ class SearchToolbar : AppBarLayout {
     lateinit var searchToolbarCallback: SearchToolbarCallback
 
     init {
-        inflate(R.layout.search_toolbar)
+        inflate(R.layout.toolbar_search)
         initEditText()
     }
 

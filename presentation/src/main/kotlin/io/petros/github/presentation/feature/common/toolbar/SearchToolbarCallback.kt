@@ -1,4 +1,4 @@
-package io.petros.github.presentation.feature.common
+package io.petros.github.presentation.feature.common.toolbar
 
 interface SearchToolbarCallback {
 
