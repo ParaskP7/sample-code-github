@@ -42,6 +42,7 @@ android {
     testOptions {
         unitTests {
             all {
+                includeAndroidResources = true // So that robolectric has access to resources.
                 testLogging { // Print test details in the terminal (or CI).
                     events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
                     exceptionFormat 'full'
@@ -52,12 +53,13 @@ android {
     sourceSets {
         main {
             java.srcDirs = [
-                    'src/main/kotlin'
+                    'src/main/kotlin',
             ]
         }
         test {
             java.srcDirs = [
-                    'src/test/kotlin'
+                    'src/test/kotlin',
+                    'src/robolectricTest/kotlin',
             ]
             resources.srcDirs = [
                     'src/test/resources',
@@ -65,7 +67,7 @@ android {
         }
         androidTest {
             java.srcDirs = [
-                    'src/androidTest/kotlin'
+                    'src/androidTest/kotlin',
             ]
         }
     }

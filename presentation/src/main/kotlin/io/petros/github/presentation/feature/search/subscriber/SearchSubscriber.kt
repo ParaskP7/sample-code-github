@@ -6,7 +6,7 @@ import io.reactivex.observers.DisposableSingleObserver
 import timber.log.Timber
 
 class SearchSubscriber(
-    private val searchResultsObservable: MutableLiveData<SearchResults>
+    val searchResultsObservable: MutableLiveData<SearchResults>
 ) : DisposableSingleObserver<SearchResults>() {
 
     override fun onSuccess(searchResults: SearchResults) {

@@ -75,6 +75,14 @@ ext.deps = [
                 'mockitoKotlin': "com.nhaarman:mockito-kotlin:$versions.mockito_kotlin",
         ],
 
+        'archTest'   : [
+                'core': "android.arch.core:core-testing:$versions.arch",
+        ],
+
+        'robolectric': [
+                'robolectric': "org.robolectric:robolectric:$versions.robolectric",
+        ],
+
         // ANDROID TEST IMPLEMENTATION // ***********************************************************************************
 
         'supportTest': [
