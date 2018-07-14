@@ -1,0 +1,51 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath deps.plugin.kotlin
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+apply from: '../config/gradle/android/android.gradle'
+
+android {
+    defaultConfig {
+        applicationId group
+        versionCode app.major * 10000 + app.minor * 1000 + app.patch * 100 + app.build
+        versionName "${app.major}.${app.minor}.${app.patch}"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            applicationIdSuffix ".$suffix.debug"
+            versionNameSuffix "-$suffix.debug"
+            debuggable true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation deps.module.domain
+    implementation deps.module.data
+
+    implementation deps.kotlin.jre
+    implementation deps.support.design
+    implementation deps.support.constraintLayout
+
+    testImplementation deps.test.junit
+
+    androidTestImplementation deps.supportTest.runner
+    androidTestImplementation(deps.androidTest.espresso, {
+        exclude group: excludedDeps.group.androidSupport, module: excludedDeps.module.supportAnnotations
+    })
+}
