@@ -7,6 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".presentation.feature.search.SearchActivity">
 
+    <io.petros.github.presentation.feature.common.SearchToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <TextView
         android:id="@+id/tv_search_result"
         android:layout_width="wrap_content"

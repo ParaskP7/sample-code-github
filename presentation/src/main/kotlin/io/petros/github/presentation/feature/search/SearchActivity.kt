@@ -5,14 +5,19 @@ import android.os.Bundle
 import io.petros.github.R
 import io.petros.github.domain.model.search.SearchResults
 import io.petros.github.presentation.feature.BaseActivity
+import io.petros.github.presentation.feature.common.SearchToolbarCallback
 import kotlinx.android.synthetic.main.activity_search.*
 
-class SearchActivity : BaseActivity<SearchActivityViewModel>() {
+class SearchActivity : BaseActivity<SearchActivityViewModel>(), SearchToolbarCallback {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        initToolbar()
         initObservers()
-        search()
+    }
+
+    private fun initToolbar() {
+        toolbar.searchToolbarCallback = this
     }
 
     /* OBSERVERS */
@@ -29,6 +34,12 @@ class SearchActivity : BaseActivity<SearchActivityViewModel>() {
 
     private fun showSearchResults(searchResults: SearchResults) {
         tv_search_result.text = searchResults.text
+    }
+
+    /* CALLBACK */
+
+    override fun onSearch(searchTerm: String) {
+        search()
     }
 
     /* DATA LOADING */
