@@ -16,6 +16,9 @@ ext.versions = [
         support_library  : '27.1.1',
         constraint_layout: '1.1.2',
 
+        // Architecture Components
+        arch             : '1.1.1',
+
         // Logging
         timber           : '4.7.1',
 
