@@ -1,19 +1,17 @@
-package io.petros.github.presentation
+package io.petros.github.presentation.feature.search
 
 import android.os.Bundle
 import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import io.petros.github.R
+import io.petros.github.presentation.feature.BaseActivity
+import kotlinx.android.synthetic.main.activity_search.*
 
-import kotlinx.android.synthetic.main.activity_main.*
-
-class MainActivity : AppCompatActivity() {
+class SearchActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
@@ -37,4 +35,9 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+    /* CONTRACT */
+
+    override fun constructContentView() = R.layout.activity_search
+
 }
