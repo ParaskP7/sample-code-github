@@ -5,7 +5,7 @@ import android.support.annotation.VisibleForTesting
 import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
 import io.petros.github.R
-import io.petros.github.domain.model.search.Repository
+import io.petros.github.domain.model.repository.Repository
 import io.petros.github.presentation.feature.common.list.adapter.AdapterStatus
 import io.petros.github.presentation.feature.common.list.holder.ErrorViewHolder
 import io.petros.github.presentation.feature.common.list.holder.ProgressViewHolder

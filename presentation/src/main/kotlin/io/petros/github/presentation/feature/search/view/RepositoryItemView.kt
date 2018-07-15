@@ -5,7 +5,7 @@ import android.support.v7.widget.CardView
 import android.util.AttributeSet
 import android.view.ViewGroup
 import io.petros.github.R
-import io.petros.github.domain.model.search.Repository
+import io.petros.github.domain.model.repository.Repository
 import io.petros.github.presentation.feature.displayImage
 import io.petros.github.presentation.feature.getDimension
 import io.petros.github.presentation.feature.inflate

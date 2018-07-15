@@ -4,7 +4,7 @@ import android.arch.lifecycle.Observer
 import android.os.Bundle
 import com.f2prateek.dart.InjectExtra
 import io.petros.github.R
-import io.petros.github.domain.model.search.Repository
+import io.petros.github.domain.model.repository.Repository
 import io.petros.github.presentation.feature.BaseActivity
 import kotlinx.android.synthetic.main.activity_repository.*
 import timber.log.Timber

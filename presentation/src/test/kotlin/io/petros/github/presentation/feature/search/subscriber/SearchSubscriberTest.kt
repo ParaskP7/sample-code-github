@@ -6,7 +6,7 @@ import android.arch.lifecycle.Observer
 import com.nhaarman.mockito_kotlin.mock
 import com.nhaarman.mockito_kotlin.verify
 import com.nhaarman.mockito_kotlin.verifyZeroInteractions
-import io.petros.github.domain.model.search.RepositoryResults
+import io.petros.github.domain.model.repository.RepositoryResults
 import io.petros.github.presentation.feature.common.list.adapter.AdapterStatus
 import io.petros.github.test.domain.TestSearchResultsProvider.Companion.provideRepositoryResults
 import org.junit.Before

@@ -1,7 +1,7 @@
 package io.petros.github.test.domain
 
+import io.petros.github.domain.model.repository.Repository
 import io.petros.github.domain.model.repository.RepositoryDetails
-import io.petros.github.domain.model.search.Repository
 
 class TestRepositoryProvider {
 

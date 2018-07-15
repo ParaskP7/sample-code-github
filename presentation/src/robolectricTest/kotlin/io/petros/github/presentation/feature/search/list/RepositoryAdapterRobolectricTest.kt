@@ -4,7 +4,7 @@ import android.support.v7.widget.RecyclerView
 import com.nhaarman.mockito_kotlin.mock
 import com.nhaarman.mockito_kotlin.verify
 import com.nhaarman.mockito_kotlin.verifyZeroInteractions
-import io.petros.github.domain.model.search.Repository
+import io.petros.github.domain.model.repository.Repository
 import io.petros.github.presentation.RobolectricTestProvider.Companion.provideContext
 import io.petros.github.presentation.feature.common.list.adapter.AdapterStatus
 import io.petros.github.presentation.feature.common.list.holder.ErrorViewHolder

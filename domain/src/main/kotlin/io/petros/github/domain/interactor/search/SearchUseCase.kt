@@ -1,7 +1,7 @@
 package io.petros.github.domain.interactor.search
 
 import io.petros.github.domain.interactor.UseCaseSingle
-import io.petros.github.domain.model.search.RepositoryResults
+import io.petros.github.domain.model.repository.RepositoryResults
 import io.petros.github.domain.reactive.rx.RxSchedulers
 import io.petros.github.domain.repository.search.SearchRepository
 import io.reactivex.Single

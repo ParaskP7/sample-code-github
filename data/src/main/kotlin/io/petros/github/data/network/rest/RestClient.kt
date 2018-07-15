@@ -4,9 +4,9 @@ import io.petros.github.data.network.WebService
 import io.petros.github.data.network.rest.mapper.repository.RepositoryMapper
 import io.petros.github.data.network.rest.mapper.search.SearchMapper
 import io.petros.github.data.network.rest.mapper.subscriber.SubscriberMapper
+import io.petros.github.domain.model.repository.Repository
 import io.petros.github.domain.model.repository.RepositoryDetails
-import io.petros.github.domain.model.search.Repository
-import io.petros.github.domain.model.search.RepositoryResults
+import io.petros.github.domain.model.repository.RepositoryResults
 import io.petros.github.domain.model.subscriber.SubscriberResults
 import io.reactivex.Single
 import javax.inject.Inject

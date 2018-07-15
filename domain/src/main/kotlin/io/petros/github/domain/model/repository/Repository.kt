@@ -1,4 +1,4 @@
-package io.petros.github.domain.model.search
+package io.petros.github.domain.model.repository
 
 import java.io.Serializable
 

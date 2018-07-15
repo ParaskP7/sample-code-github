@@ -1,8 +1,8 @@
 package io.petros.github.domain.interactor.repository
 
 import io.petros.github.domain.interactor.UseCaseSingle
+import io.petros.github.domain.model.repository.Repository
 import io.petros.github.domain.model.repository.RepositoryDetails
-import io.petros.github.domain.model.search.Repository
 import io.petros.github.domain.reactive.rx.RxSchedulers
 import io.petros.github.domain.repository.repository.RepositoryRepository
 import io.reactivex.Single

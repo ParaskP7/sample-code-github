@@ -2,8 +2,8 @@ package io.petros.github.data.network.rest.mapper.search
 
 import io.petros.github.data.network.rest.response.search.Repo
 import io.petros.github.data.network.rest.response.search.SearchResultsResponse
-import io.petros.github.domain.model.search.Repository
-import io.petros.github.domain.model.search.RepositoryResults
+import io.petros.github.domain.model.repository.Repository
+import io.petros.github.domain.model.repository.RepositoryResults
 
 class SearchMapper { // MIT
 

@@ -4,7 +4,7 @@ import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import android.support.annotation.VisibleForTesting
 import io.petros.github.domain.interactor.search.SearchUseCase
-import io.petros.github.domain.model.search.RepositoryResults
+import io.petros.github.domain.model.repository.RepositoryResults
 import io.petros.github.presentation.feature.common.list.adapter.AdapterStatus
 import io.petros.github.presentation.feature.search.subscriber.SearchSubscriber
 import javax.inject.Inject

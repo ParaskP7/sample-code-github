@@ -1,7 +1,7 @@
 package io.petros.github.data.repository.search
 
 import io.petros.github.data.network.WebService
-import io.petros.github.domain.model.search.RepositoryResults
+import io.petros.github.domain.model.repository.RepositoryResults
 import io.petros.github.domain.repository.search.SearchRepository
 import io.reactivex.Single
 import javax.inject.Inject

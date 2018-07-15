@@ -5,8 +5,8 @@ import android.arch.lifecycle.ViewModel
 import android.support.annotation.VisibleForTesting
 import io.petros.github.domain.interactor.repository.RepositoryDetailsUseCase
 import io.petros.github.domain.interactor.subscriber.SubscribersUseCase
+import io.petros.github.domain.model.repository.Repository
 import io.petros.github.domain.model.repository.RepositoryDetails
-import io.petros.github.domain.model.search.Repository
 import io.petros.github.domain.model.subscriber.SubscriberResults
 import io.petros.github.presentation.feature.common.list.adapter.AdapterStatus
 import io.petros.github.presentation.feature.repository.subscriber.RepositoryDetailsSubscriber

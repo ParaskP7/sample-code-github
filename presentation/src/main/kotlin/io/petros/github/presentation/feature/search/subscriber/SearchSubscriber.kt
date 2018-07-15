@@ -1,7 +1,7 @@
 package io.petros.github.presentation.feature.search.subscriber
 
 import android.arch.lifecycle.MutableLiveData
-import io.petros.github.domain.model.search.RepositoryResults
+import io.petros.github.domain.model.repository.RepositoryResults
 import io.petros.github.presentation.feature.common.list.adapter.AdapterStatus
 import io.reactivex.observers.DisposableSingleObserver
 import timber.log.Timber

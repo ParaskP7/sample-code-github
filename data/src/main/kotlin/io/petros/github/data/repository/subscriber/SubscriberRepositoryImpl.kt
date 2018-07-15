@@ -1,7 +1,7 @@
 package io.petros.github.data.repository.subscriber
 
 import io.petros.github.data.network.WebService
-import io.petros.github.domain.model.search.Repository
+import io.petros.github.domain.model.repository.Repository
 import io.petros.github.domain.model.subscriber.SubscriberResults
 import io.petros.github.domain.repository.subsriber.SubscriberRepository
 import io.reactivex.Single

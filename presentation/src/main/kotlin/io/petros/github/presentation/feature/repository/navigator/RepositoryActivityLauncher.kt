@@ -6,7 +6,7 @@ import android.support.v4.app.ActivityOptionsCompat
 import android.support.v7.app.AppCompatActivity
 import io.petros.github.Henson
 import io.petros.github.R
-import io.petros.github.domain.model.search.Repository
+import io.petros.github.domain.model.repository.Repository
 import io.petros.github.presentation.feature.navigator.ActivityLauncher
 import io.petros.github.presentation.feature.search.view.SharedElementRepository
 import javax.inject.Inject

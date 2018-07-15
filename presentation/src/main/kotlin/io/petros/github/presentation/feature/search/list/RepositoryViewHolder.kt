@@ -1,7 +1,7 @@
 package io.petros.github.presentation.feature.search.list
 
 import android.support.v7.widget.RecyclerView
-import io.petros.github.domain.model.search.Repository
+import io.petros.github.domain.model.repository.Repository
 import io.petros.github.presentation.feature.search.listener.RepositoryCallback
 import io.petros.github.presentation.feature.search.view.RepositoryItemView
 

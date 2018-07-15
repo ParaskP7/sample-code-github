@@ -1,7 +1,7 @@
 package io.petros.github.domain.interactor.subscriber
 
 import io.petros.github.domain.interactor.UseCaseSingle
-import io.petros.github.domain.model.search.Repository
+import io.petros.github.domain.model.repository.Repository
 import io.petros.github.domain.model.subscriber.SubscriberResults
 import io.petros.github.domain.reactive.rx.RxSchedulers
 import io.petros.github.domain.repository.subsriber.SubscriberRepository
