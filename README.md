@@ -15,10 +15,14 @@ the main focus of this project is:
 Below is a list of skills that are showcased:
 
 1. Architectural Pattern
-    1. [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) ```(Model View ViewModel)```
-    2. [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) ```(Architecture Components 
+    1. [Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) ```(By employing 
+    clean architecture, you can design applications with very low coupling and independent of technical implementation 
+    details, such as databases and frameworks. That way, the application becomes easy to maintain and flexible to change. 
+    It also becomes intrinsically testable.)```
+    2. [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) ```(Model View ViewModel)```
+    3. [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) ```(Architecture Components 
     ViewModel Class)```
-    3. [LivaData](https://developer.android.com/topic/libraries/architecture/livedata) ```(Architecture Components 
+    4. [LivaData](https://developer.android.com/topic/libraries/architecture/livedata) ```(Architecture Components 
     LiveData Class)```
 2. Libraries
     1. [Dagger](https://github.com/google/dagger) ```(A fast dependency injector for Android and Java)```
