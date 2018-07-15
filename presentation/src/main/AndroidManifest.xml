@@ -16,7 +16,8 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".presentation.feature.splash.SplashActivity"
+        <activity
+            android:name=".presentation.feature.splash.SplashActivity"
             android:theme="@style/SplashTheme">
 
             <intent-filter>
@@ -27,6 +28,8 @@
         </activity>
 
         <activity android:name=".presentation.feature.search.SearchActivity"/>
+
+        <activity android:name=".presentation.feature.repository.RepositoryActivity"/>
 
     </application>
 

@@ -8,11 +8,14 @@ import io.petros.github.presentation.feature.BaseActivity
 import io.petros.github.presentation.feature.common.toolbar.SearchToolbarCallback
 import io.petros.github.presentation.feature.search.list.RepositoryAdapter
 import io.petros.github.presentation.feature.search.listener.RepositoryCallback
+import io.petros.github.presentation.feature.search.navigator.SearchNavigator
 import kotlinx.android.synthetic.main.activity_search.*
-import timber.log.Timber
+import javax.inject.Inject
 
 @Suppress("TooManyFunctions")
 class SearchActivity : BaseActivity<SearchActivityViewModel>(), SearchToolbarCallback, RepositoryCallback {
+
+    @Inject lateinit var searchNavigator: SearchNavigator
 
     private val adapter = RepositoryAdapter()
 
@@ -66,7 +69,7 @@ class SearchActivity : BaseActivity<SearchActivityViewModel>(), SearchToolbarCal
     /* NAVIGATION */
 
     override fun onClick(repository: Repository) {
-        Timber.i("Repository clicked. [Repository: $repository]")
+        searchNavigator.navigate(repository)
     }
 
     /* CONTRACT */
