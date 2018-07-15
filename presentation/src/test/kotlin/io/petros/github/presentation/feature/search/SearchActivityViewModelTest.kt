@@ -6,7 +6,7 @@ import com.nhaarman.mockito_kotlin.any
 import com.nhaarman.mockito_kotlin.eq
 import com.nhaarman.mockito_kotlin.mock
 import com.nhaarman.mockito_kotlin.verify
-import io.petros.github.domain.interactor.search.SearchUseCase
+import io.petros.github.domain.interactor.search.SearchRepositoriesUseCase
 import io.petros.github.presentation.feature.common.list.adapter.AdapterStatus
 import io.petros.github.test.domain.TestSearchResultsProvider.Companion.SEARCH_TERM
 import org.junit.Before
@@ -19,7 +19,7 @@ class SearchActivityViewModelTest {
     @JvmField
     val rule = InstantTaskExecutorRule()
 
-    private val searchUseCaseMock = mock<SearchUseCase>()
+    private val searchRepositoriesUseCaseMock = mock<SearchRepositoriesUseCase>()
 
     private val statusObservableMock = mock<Observer<AdapterStatus>>()
 
@@ -27,7 +27,7 @@ class SearchActivityViewModelTest {
 
     @Before
     fun setUp() {
-        testedClass = SearchActivityViewModel(searchUseCaseMock)
+        testedClass = SearchActivityViewModel(searchRepositoriesUseCaseMock)
         testedClass.statusObservable.observeForever(statusObservableMock)
     }
 
@@ -39,17 +39,17 @@ class SearchActivityViewModelTest {
     }
 
     @Test
-    fun `When search is triggered, then search use case executes`() {
+    fun `When search is triggered, then search repositories use case executes`() {
         testedClass.search(SEARCH_TERM)
 
-        verify(searchUseCaseMock).execute(any(), eq(SearchUseCase.Params.with(SEARCH_TERM)))
+        verify(searchRepositoriesUseCaseMock).execute(any(), eq(SearchRepositoriesUseCase.Params.with(SEARCH_TERM)))
     }
 
     @Test
-    fun `When view model is destroyed, then search use case is disposed`() {
+    fun `When view model is destroyed, then search repositories use case is disposed`() {
         testedClass.onCleared()
 
-        verify(searchUseCaseMock).dispose()
+        verify(searchRepositoriesUseCaseMock).dispose()
     }
 
 }

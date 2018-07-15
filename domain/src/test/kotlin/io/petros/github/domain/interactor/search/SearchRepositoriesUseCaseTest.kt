@@ -12,18 +12,18 @@ import org.assertj.core.api.Assertions.assertThat
 import org.junit.Before
 import org.junit.Test
 
-class SearchUseCaseTest {
+class SearchRepositoriesUseCaseTest {
 
     private val repositoryResults = provideRepositoryResults()
 
     private val searchRepositoryMock = mock<SearchRepository>()
 
-    private lateinit var testedClass: SearchUseCase
-    private val params = SearchUseCase.Params.with(SEARCH_TERM)
+    private lateinit var testedClass: SearchRepositoriesUseCase
+    private val params = SearchRepositoriesUseCase.Params.with(SEARCH_TERM)
 
     @Before
     fun setUp() {
-        testedClass = SearchUseCase(searchRepositoryMock, provideRxSchedulers())
+        testedClass = SearchRepositoriesUseCase(searchRepositoryMock, provideRxSchedulers())
     }
 
     @Test

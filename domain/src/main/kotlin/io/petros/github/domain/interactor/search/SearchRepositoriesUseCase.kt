@@ -7,10 +7,10 @@ import io.petros.github.domain.repository.search.SearchRepository
 import io.reactivex.Single
 import javax.inject.Inject
 
-class SearchUseCase @Inject constructor(
+class SearchRepositoriesUseCase @Inject constructor(
     private val searchRepository: SearchRepository,
     rxSchedulers: RxSchedulers
-) : UseCaseSingle<RepositoryResults, SearchUseCase.Params>(rxSchedulers) {
+) : UseCaseSingle<RepositoryResults, SearchRepositoriesUseCase.Params>(rxSchedulers) {
 
     override fun buildUseCaseObservable(params: Params): Single<RepositoryResults> {
         return searchRepository.search(params.searchTerm)
