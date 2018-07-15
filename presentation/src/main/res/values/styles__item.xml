@@ -23,4 +23,47 @@
         <item name="android:textSize">@dimen/text_size_20</item>
     </style>
 
+    <!-- REPOSITORY -->
+
+    <style name="RepositoryItemOwnerAvatarImageView">
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:src">@drawable/ic_hub</item>
+    </style>
+
+    <style name="RepositoryItemLinearLayout">
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">8dp</item>
+    </style>
+
+    <style name="RepositoryItemNameTextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RepositoryItemDescriptionTextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="RepositoryItemNumberOfForksLabelTextView">
+        <item name="android:text">@string/repository_number_of_forks_label</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="RepositoryItemNumberOfForksValueTextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
 </resources>

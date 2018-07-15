@@ -2,6 +2,13 @@
 
 <resources>
 
+    <!-- STATE -->
+
     <string name="error_loading">Please try again</string>
+    <string name="retry_loading">Please retry loading</string>
+
+    <!-- REPOSITORY -->
+
+    <string name="repository_number_of_forks_label">Number of Forks:</string>
 
 </resources>

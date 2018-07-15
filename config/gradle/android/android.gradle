@@ -41,8 +41,8 @@ android {
     }
     testOptions {
         unitTests {
+            includeAndroidResources = true // So that robolectric has access to resources.
             all {
-                includeAndroidResources = true // So that robolectric has access to resources.
                 testLogging { // Print test details in the terminal (or CI).
                     events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
                     exceptionFormat 'full'
@@ -63,6 +63,7 @@ android {
             ]
             resources.srcDirs = [
                     'src/test/resources',
+                    'src/robolectricTest/resources',
             ]
         }
         androidTest {

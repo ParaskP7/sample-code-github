@@ -7,6 +7,7 @@ import com.nhaarman.mockito_kotlin.mock
 import com.nhaarman.mockito_kotlin.verify
 import com.nhaarman.mockito_kotlin.verifyZeroInteractions
 import io.petros.github.domain.model.search.SearchResults
+import io.petros.github.presentation.feature.common.list.adapter.AdapterStatus
 import io.petros.github.test.domain.TestSearchResultsProvider.Companion.provideSearchResults
 import org.junit.Before
 import org.junit.Rule
@@ -20,14 +21,23 @@ class SearchSubscriberTest {
 
     private val searchResults = provideSearchResults()
 
+    private val statusObservableMock = mock<Observer<AdapterStatus>>()
     private val searchResultsObservableMock = mock<Observer<SearchResults>>()
 
     private lateinit var testedClass: SearchSubscriber
 
     @Before
     fun setUp() {
-        testedClass = SearchSubscriber(MutableLiveData())
-        testedClass.searchResultsObservable.observeForever(searchResultsObservableMock)
+        testedClass = SearchSubscriber(MutableLiveData(), MutableLiveData())
+        testedClass.statusObservable.observeForever(statusObservableMock)
+        testedClass.resultsObservable.observeForever(searchResultsObservableMock)
+    }
+
+    @Test
+    fun `When search succeeds, then an idle status is posted`() {
+        testedClass.onSuccess(searchResults)
+
+        verify(statusObservableMock).onChanged(AdapterStatus.IDLE)
     }
 
     @Test
@@ -35,6 +45,13 @@ class SearchSubscriberTest {
         testedClass.onSuccess(searchResults)
 
         verify(searchResultsObservableMock).onChanged(searchResults)
+    }
+
+    @Test
+    fun `When search fails, then an error status is posted`() {
+        testedClass.onError(Exception())
+
+        verify(statusObservableMock).onChanged(AdapterStatus.ERROR)
     }
 
     @Test

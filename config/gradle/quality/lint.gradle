@@ -11,7 +11,8 @@ android {
         xmlReport true
         disable 'MissingRegistered', // Because of UAST
                 'UnusedIds', // Because of UAST
-                'ContentDescription'
+                'ContentDescription',
+                'SelectableText'
     }
 
 }

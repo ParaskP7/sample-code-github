@@ -13,7 +13,7 @@ import org.mockito.ArgumentCaptor
 import org.robolectric.RobolectricTestRunner
 
 @RunWith(RobolectricTestRunner::class)
-class SearchActivityLauncherTest {
+class SearchActivityLauncherRobolectricTest {
 
     private var appCompatActivityMock = mock<AppCompatActivity>()
 
