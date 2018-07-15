@@ -1,7 +1,7 @@
 package io.petros.github.data.network.rest
 
 import io.petros.github.data.network.rest.response.repository.RepoDetails
-import io.petros.github.data.network.rest.response.search.RepositoryResultsResponse
+import io.petros.github.data.network.rest.response.repository.RepositoryResultsResponse
 import io.petros.github.data.network.rest.response.subscriber.Sub
 import io.reactivex.Single
 import retrofit2.http.GET

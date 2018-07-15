@@ -1,7 +1,7 @@
 package io.petros.github.data.network.rest.mapper.search
 
-import io.petros.github.data.network.rest.response.search.Repo
-import io.petros.github.data.network.rest.response.search.RepositoryResultsResponse
+import io.petros.github.data.network.rest.response.repository.Repo
+import io.petros.github.data.network.rest.response.repository.RepositoryResultsResponse
 import io.petros.github.domain.model.repository.Repository
 import io.petros.github.domain.model.repository.RepositoryResults
 

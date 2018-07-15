@@ -1,4 +1,4 @@
-package io.petros.github.data.network.rest.response.search
+package io.petros.github.data.network.rest.response.repository
 
 data class Repo(
     val id: Int,
