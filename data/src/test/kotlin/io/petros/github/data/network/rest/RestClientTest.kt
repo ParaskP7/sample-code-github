@@ -23,12 +23,12 @@ class RestClientTest {
     }
 
     @Test
-    fun `When a search is triggered, then api search is triggered`() {
-        whenever(restApiMock.search(SEARCH_TERM)).thenReturn(Single.just(mock()))
+    fun `When a search repositories is triggered, then api search repositories is triggered`() {
+        whenever(restApiMock.searchRepositories(SEARCH_TERM)).thenReturn(Single.just(mock()))
 
-        testedClass.search(SEARCH_TERM)
+        testedClass.searchRepositories(SEARCH_TERM)
 
-        verify(restApiMock).search(SEARCH_TERM)
+        verify(restApiMock).searchRepositories(SEARCH_TERM)
     }
 
     @Test

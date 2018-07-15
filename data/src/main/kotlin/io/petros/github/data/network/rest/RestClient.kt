@@ -15,8 +15,8 @@ class RestClient @Inject constructor(
     private val restApi: RestApi
 ) : WebService {
 
-    override fun search(searchTerm: String): Single<RepositoryResults> {
-        return restApi.search(searchTerm)
+    override fun searchRepositories(searchTerm: String): Single<RepositoryResults> {
+        return restApi.searchRepositories(searchTerm)
             .map { SearchMapper.transform(it) }
     }
 

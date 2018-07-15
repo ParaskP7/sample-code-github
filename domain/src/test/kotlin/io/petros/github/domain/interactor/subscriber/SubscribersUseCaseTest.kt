@@ -35,7 +35,7 @@ class SubscribersUseCaseTest {
     }
 
     @Test
-    fun `When subscriber results returns, then subscriber results is the expected one`() {
+    fun `When subscribers returns, then subscriber results is the expected one`() {
         whenever(subscriberRepositoryMock.subscribers(repository)).thenReturn(Single.just(subscriberResults))
 
         val result = testedClass.buildUseCaseObservable(params).blockingGet()

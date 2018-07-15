@@ -19,10 +19,10 @@ class SearchRepositoryImplTest {
     }
 
     @Test
-    fun `When search is triggered, then web service triggers search`() {
-        testedClass.search(SEARCH_TERM)
+    fun `When search repositories is triggered, then web service triggers search repositories`() {
+        testedClass.searchRepositories(SEARCH_TERM)
 
-        verify(webServiceMock).search(SEARCH_TERM)
+        verify(webServiceMock).searchRepositories(SEARCH_TERM)
     }
 
 }

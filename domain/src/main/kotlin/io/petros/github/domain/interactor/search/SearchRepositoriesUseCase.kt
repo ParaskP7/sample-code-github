@@ -13,7 +13,7 @@ class SearchRepositoriesUseCase @Inject constructor(
 ) : UseCaseSingle<RepositoryResults, SearchRepositoriesUseCase.Params>(rxSchedulers) {
 
     override fun buildUseCaseObservable(params: Params): Single<RepositoryResults> {
-        return searchRepository.search(params.searchTerm)
+        return searchRepository.searchRepositories(params.searchTerm)
     }
 
     data class Params constructor(val searchTerm: String) {

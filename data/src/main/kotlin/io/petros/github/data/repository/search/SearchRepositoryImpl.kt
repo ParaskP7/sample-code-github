@@ -10,8 +10,8 @@ class SearchRepositoryImpl @Inject constructor(
     private val webService: WebService
 ) : SearchRepository {
 
-    override fun search(searchTerm: String): Single<RepositoryResults> {
-        return webService.search(searchTerm)
+    override fun searchRepositories(searchTerm: String): Single<RepositoryResults> {
+        return webService.searchRepositories(searchTerm)
     }
 
 }

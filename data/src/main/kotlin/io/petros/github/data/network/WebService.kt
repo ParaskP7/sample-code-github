@@ -8,7 +8,7 @@ import io.reactivex.Single
 
 interface WebService {
 
-    fun search(searchTerm: String): Single<RepositoryResults>
+    fun searchRepositories(searchTerm: String): Single<RepositoryResults>
 
     fun repositoryDetails(repository: Repository): Single<RepositoryDetails>
 

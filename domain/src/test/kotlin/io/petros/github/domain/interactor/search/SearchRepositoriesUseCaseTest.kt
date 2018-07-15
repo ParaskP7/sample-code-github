@@ -27,15 +27,15 @@ class SearchRepositoriesUseCaseTest {
     }
 
     @Test
-    fun `When search use case is build, then search repository triggers search`() {
+    fun `When search use case is build, then search repository triggers search repositories`() {
         testedClass.buildUseCaseObservable(params)
 
-        verify(searchRepositoryMock).search(SEARCH_TERM)
+        verify(searchRepositoryMock).searchRepositories(SEARCH_TERM)
     }
 
     @Test
-    fun `When search returns, then repository results is the expected one`() {
-        whenever(searchRepositoryMock.search(SEARCH_TERM)).thenReturn(Single.just(repositoryResults))
+    fun `When search repositories returns, then repository results is the expected one`() {
+        whenever(searchRepositoryMock.searchRepositories(SEARCH_TERM)).thenReturn(Single.just(repositoryResults))
 
         val result = testedClass.buildUseCaseObservable(params).blockingGet()
 
