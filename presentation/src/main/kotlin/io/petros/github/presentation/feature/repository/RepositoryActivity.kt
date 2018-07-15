@@ -13,7 +13,13 @@ class RepositoryActivity : BaseActivity<RepositoryActivityViewModel>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        tv_repository_name.text = repository.name
+        initToolbar()
+        tv_repository.text = repository.name
+    }
+
+    private fun initToolbar() {
+        toolbar.bind(repository)
+        toolbar.setOnBackClick { onBackPressed() }
     }
 
     /* CONTRACT */

@@ -17,7 +17,7 @@
             app:layout_constraintEnd_toStartOf="@+id/ll_repository"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/ic_hub"/>
+            tools:src="@drawable/ic_hub_black"/>
 
         <LinearLayout
             android:id="@+id/ll_repository"

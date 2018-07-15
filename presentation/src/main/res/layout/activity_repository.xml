@@ -6,12 +6,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <io.petros.github.presentation.feature.common.toolbar.RepositoryToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"/>
+
     <TextView
-        android:id="@+id/tv_repository_name"
+        android:id="@+id/tv_repository"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="Repository"
-        tools:ignore="HardcodedText"/>
+        tools:text="Repository"/>
 
 </LinearLayout>
