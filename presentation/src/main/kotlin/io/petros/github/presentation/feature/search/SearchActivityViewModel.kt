@@ -13,8 +13,8 @@ class SearchActivityViewModel @Inject constructor(
     private val searchUseCase: SearchUseCase
 ) : ViewModel() {
 
-    val resultsObservable = MutableLiveData<SearchResults>()
     val statusObservable = MutableLiveData<AdapterStatus>()
+    val resultsObservable = MutableLiveData<SearchResults>()
 
     fun search(searchTerm: String) {
         statusObservable.postValue(AdapterStatus.LOADING)

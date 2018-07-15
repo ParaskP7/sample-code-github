@@ -39,7 +39,7 @@ class SearchActivity : BaseActivity<SearchActivityViewModel>(), SearchToolbarCal
 
     private fun initObservers() {
         observeStatus()
-        observeSearchResult()
+        observeResults()
     }
 
     private fun observeStatus() {
@@ -48,7 +48,7 @@ class SearchActivity : BaseActivity<SearchActivityViewModel>(), SearchToolbarCal
         })
     }
 
-    private fun observeSearchResult() {
+    private fun observeResults() {
         viewModel.resultsObservable.observe(this, Observer {
             it?.let { adapter.setItems(it.repositories) }
         })
