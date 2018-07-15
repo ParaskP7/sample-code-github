@@ -2,8 +2,22 @@
 
 <resources>
 
-    <dimen name="toolbar_height">66dp</dimen>
-    <dimen name="sub_toolbar_height">48dp</dimen>
-    <dimen name="super_toolbar_height">114dp</dimen>
+    <!-- REPOSITORY -->
+
+    <dimen name="repository_item_height">112dp</dimen>
+    <dimen name="repository_item_margin">8dp</dimen>
+    <dimen name="repository_item_space">8dp</dimen>
+
+    <dimen name="repository_item_radius">2dp</dimen>
+    <dimen name="repository_item_elevation">2dp</dimen>
+
+    <!-- SUBSCRIBER -->
+
+    <dimen name="subscriber_item_height">56dp</dimen>
+    <dimen name="subscriber_item_margin">8dp</dimen>
+    <dimen name="subscriber_item_space">8dp</dimen>
+
+    <dimen name="subscriber_item_radius">2dp</dimen>
+    <dimen name="subscriber_item_elevation">2dp</dimen>
 
 </resources>

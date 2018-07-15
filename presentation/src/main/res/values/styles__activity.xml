@@ -2,8 +2,12 @@
 
 <resources>
 
-    <style name="SearchRecyclerView">
+    <style name="RepositoryRecyclerView">
         <item name="android:paddingTop">@dimen/repository_item_space</item>
+    </style>
+
+    <style name="SubscriberRecyclerView">
+        <item name="android:paddingTop">@dimen/subscriber_item_space</item>
     </style>
 
 </resources>
