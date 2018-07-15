@@ -5,6 +5,7 @@ import android.support.design.widget.AppBarLayout
 import android.util.AttributeSet
 import io.petros.github.R
 import io.petros.github.domain.model.repository.Repository
+import io.petros.github.domain.model.repository.RepositoryDetails
 import io.petros.github.presentation.feature.displayCircleImage
 import io.petros.github.presentation.feature.inflate
 import kotlinx.android.synthetic.main.toolbar_repository.view.*
@@ -22,6 +23,10 @@ class RepositoryToolbar : AppBarLayout {
     fun bind(repository: Repository) {
         tv_name.text = repository.name
         iv_owner_avatar.displayCircleImage(repository.ownerAvatar)
+    }
+
+    fun bind(repositoryDetails: RepositoryDetails) {
+        tv_subscribers_count.text = repositoryDetails.subscribersCount.toString()
     }
 
     fun setOnBackClick(action: () -> Unit) = iv_back.setOnClickListener { action() }

@@ -7,30 +7,58 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorPrimary"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/iv_back"
-            style="@style/RepositoryToolbarIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/tv_name"
-            style="@style/RepositoryToolbarTextView"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.8"
-            tools:text="RxJava"/>
+            <ImageView
+                android:id="@+id/iv_back"
+                style="@style/RepositoryToolbarIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-        <ImageView
-            android:id="@+id/iv_owner_avatar"
-            style="@style/RepositoryToolbarAvatar"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_weight="0.2"
-            android:transitionName="@string/owner_avatar_shared_element"
-            tools:src="@drawable/ic_hub_white"/>
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/RepositoryToolbarTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                tools:text="RxJava"/>
+
+            <ImageView
+                android:id="@+id/iv_owner_avatar"
+                style="@style/RepositoryToolbarAvatar"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_weight="0.2"
+                android:transitionName="@string/owner_avatar_shared_element"
+                tools:src="@drawable/ic_hub_white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sub_toolbar_height"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/RepositoryToolbarSubscribersLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/tv_subscribers_count"
+                style="@style/RepositoryToolbarSubscribersValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                tools:text="2269"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 

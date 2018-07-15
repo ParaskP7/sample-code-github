@@ -9,7 +9,7 @@
     <io.petros.github.presentation.feature.common.toolbar.RepositoryToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="66dp"/>
+        android:layout_height="@dimen/super_toolbar_height"/>
 
     <TextView
         android:id="@+id/tv_repository"

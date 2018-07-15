@@ -4,6 +4,7 @@ import com.nhaarman.mockito_kotlin.spy
 import com.nhaarman.mockito_kotlin.verify
 import io.petros.github.presentation.RobolectricTestProvider.Companion.provideActivity
 import io.petros.github.test.domain.TestRepositoryProvider.Companion.provideRepository
+import io.petros.github.test.domain.TestRepositoryProvider.Companion.provideRepositoryDetails
 import kotlinx.android.synthetic.main.toolbar_repository.view.*
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Before
@@ -17,6 +18,7 @@ class RepositoryToolbarRobolectricTest {
     private val activity = provideActivity()
 
     private val repository = provideRepository()
+    private val repositoryDetails = provideRepositoryDetails()
 
     private lateinit var testedClass: RepositoryToolbar
 
@@ -39,6 +41,13 @@ class RepositoryToolbarRobolectricTest {
         testedClass.bind(repository)
 
         assertThat(testedClass.iv_owner_avatar.drawable).isNotNull
+    }
+
+    @Test
+    fun `When repository details is bind, then subscribers count is set`() {
+        testedClass.bind(repositoryDetails)
+
+        assertThat(testedClass.tv_subscribers_count.text).isEqualTo(repositoryDetails.subscribersCount.toString())
     }
 
     @Test

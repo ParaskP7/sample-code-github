@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <dimen name="repository_item_height">112dp</dimen>
+    <dimen name="repository_item_margin">8dp</dimen>
+    <dimen name="repository_item_space">8dp</dimen>
+
+    <dimen name="repository_item_radius">2dp</dimen>
+    <dimen name="repository_item_elevation">2dp</dimen>
+
+</resources>

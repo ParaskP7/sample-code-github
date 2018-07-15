@@ -35,7 +35,7 @@ class RepositoryActivity : BaseActivity<RepositoryActivityViewModel>() {
 
     private fun observeDetails() {
         viewModel.detailsObservable.observe(this, Observer {
-            it?.let { Timber.i("$it") }
+            it?.let { toolbar.bind(it) }
         })
     }
 
