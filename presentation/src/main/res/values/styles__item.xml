@@ -27,7 +27,6 @@
 
     <style name="RepositoryItemOwnerAvatarImageView">
         <item name="android:scaleType">fitXY</item>
-        <item name="android:src">@drawable/ic_hub</item>
     </style>
 
     <style name="RepositoryItemLinearLayout">

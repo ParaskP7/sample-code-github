@@ -6,6 +6,7 @@ import android.util.AttributeSet
 import android.view.ViewGroup
 import io.petros.github.R
 import io.petros.github.domain.model.search.Repository
+import io.petros.github.presentation.feature.displayImage
 import io.petros.github.presentation.feature.getDimension
 import io.petros.github.presentation.feature.inflate
 import io.petros.github.presentation.feature.setBackgroundColorCompat
@@ -38,6 +39,7 @@ class RepositoryItemView : CardView {
     }
 
     private fun bindRepository(repository: Repository) {
+        iv_repository_owner_avatar.displayImage(repository.ownerAvatar)
         tv_repository_name.text = repository.name
         tv_repository_description.text = repository.description
         tv_repository_number_of_forks.text = repository.numberOfForks.toString()

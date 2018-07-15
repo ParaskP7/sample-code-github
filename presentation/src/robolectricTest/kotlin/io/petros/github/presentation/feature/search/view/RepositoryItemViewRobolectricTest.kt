@@ -24,6 +24,15 @@ class RepositoryItemViewRobolectricTest {
     }
 
     @Test
+    fun `When repository is bind, then repository owner avatar is set`() {
+        assertThat(testedClass.iv_repository_owner_avatar.drawable).isNull()
+
+        testedClass.bind(repository)
+
+        assertThat(testedClass.iv_repository_owner_avatar.drawable).isNotNull
+    }
+
+    @Test
     fun `When repository is bind, then repository name is set`() {
         testedClass.bind(repository)
 
