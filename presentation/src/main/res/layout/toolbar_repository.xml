@@ -29,6 +29,7 @@
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_weight="0.2"
+            android:transitionName="@string/owner_avatar_shared_element"
             tools:src="@drawable/ic_hub_white"/>
 
     </LinearLayout>

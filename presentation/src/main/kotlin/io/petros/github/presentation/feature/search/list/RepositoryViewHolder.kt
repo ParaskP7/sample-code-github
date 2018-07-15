@@ -12,15 +12,15 @@ class RepositoryViewHolder(
 
     fun bind(repository: Repository) {
         bindRepository(repository)
-        bindCallback(repository)
+        bindRepositoryCallback(repository)
     }
 
     private fun bindRepository(repository: Repository) {
         (itemView as RepositoryItemView).bind(repository)
     }
 
-    private fun bindCallback(repository: Repository) {
-        itemView.setOnClickListener { callback.onClick(repository) }
+    private fun bindRepositoryCallback(repository: Repository) {
+        (itemView as RepositoryItemView).bindCallback(repository, callback)
     }
 
 }

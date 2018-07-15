@@ -9,6 +9,7 @@ import io.petros.github.domain.model.search.Repository
 import io.petros.github.presentation.feature.displayImage
 import io.petros.github.presentation.feature.getDimension
 import io.petros.github.presentation.feature.inflate
+import io.petros.github.presentation.feature.search.listener.RepositoryCallback
 import io.petros.github.presentation.feature.setBackgroundColorCompat
 import kotlinx.android.synthetic.main.item_repository.view.*
 
@@ -43,6 +44,11 @@ class RepositoryItemView : CardView {
         tv_repository_name.text = repository.name
         tv_repository_description.text = repository.description
         tv_repository_number_of_forks.text = repository.numberOfForks.toString()
+    }
+
+    fun bindCallback(repository: Repository, callback: RepositoryCallback) {
+        val sharedElementRepository = SharedElementRepository(repository, iv_repository_owner_avatar)
+        setOnClickListener { callback.onClick(sharedElementRepository) }
     }
 
 }

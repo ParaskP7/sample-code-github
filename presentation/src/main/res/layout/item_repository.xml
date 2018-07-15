@@ -13,6 +13,7 @@
             style="@style/RepositoryItemOwnerAvatarImageView"
             android:layout_width="@dimen/repository_item_height"
             android:layout_height="@dimen/repository_item_height"
+            android:transitionName="@string/owner_avatar_shared_element"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/ll_repository"
             app:layout_constraintStart_toStartOf="parent"

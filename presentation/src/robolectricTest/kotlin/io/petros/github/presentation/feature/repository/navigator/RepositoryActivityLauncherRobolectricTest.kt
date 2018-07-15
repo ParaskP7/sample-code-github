@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import com.nhaarman.mockito_kotlin.mock
 import com.nhaarman.mockito_kotlin.verify
 import io.petros.github.presentation.feature.repository.RepositoryActivity
-import io.petros.github.test.domain.TestRepositoryProvider
+import io.petros.github.test.domain.TestRepositoryProvider.Companion.provideRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Before
 import org.junit.Test
@@ -22,7 +22,7 @@ class RepositoryActivityLauncherRobolectricTest {
 
     }
 
-    private val repository = TestRepositoryProvider.provideRepository()
+    private val repository = provideRepository()
 
     private var appCompatActivityMock = mock<AppCompatActivity>()
 

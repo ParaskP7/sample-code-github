@@ -3,12 +3,12 @@ package io.petros.github.presentation.feature.search
 import android.arch.lifecycle.Observer
 import android.os.Bundle
 import io.petros.github.R
-import io.petros.github.domain.model.search.Repository
 import io.petros.github.presentation.feature.BaseActivity
 import io.petros.github.presentation.feature.common.toolbar.SearchToolbarCallback
 import io.petros.github.presentation.feature.search.list.RepositoryAdapter
 import io.petros.github.presentation.feature.search.listener.RepositoryCallback
 import io.petros.github.presentation.feature.search.navigator.SearchNavigator
+import io.petros.github.presentation.feature.search.view.SharedElementRepository
 import kotlinx.android.synthetic.main.activity_search.*
 import javax.inject.Inject
 
@@ -68,7 +68,7 @@ class SearchActivity : BaseActivity<SearchActivityViewModel>(), SearchToolbarCal
 
     /* NAVIGATION */
 
-    override fun onClick(repository: Repository) {
+    override fun onClick(repository: SharedElementRepository) {
         searchNavigator.navigate(repository)
     }
 
