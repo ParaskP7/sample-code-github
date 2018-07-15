@@ -5,7 +5,7 @@ import com.nhaarman.mockito_kotlin.verify
 import com.nhaarman.mockito_kotlin.whenever
 import io.petros.github.domain.repository.search.SearchRepository
 import io.petros.github.test.domain.TestSearchResultsProvider.Companion.SEARCH_TERM
-import io.petros.github.test.domain.TestSearchResultsProvider.Companion.provideSearchResults
+import io.petros.github.test.domain.TestSearchResultsProvider.Companion.provideRepositoryResults
 import io.petros.github.test.rx.TestRxProvider.Companion.provideRxSchedulers
 import io.reactivex.Single
 import org.assertj.core.api.Assertions.assertThat
@@ -14,7 +14,7 @@ import org.junit.Test
 
 class SearchUseCaseTest {
 
-    private val searchResults = provideSearchResults()
+    private val repositoryResults = provideRepositoryResults()
 
     private val searchRepositoryMock = mock<SearchRepository>()
 
@@ -34,12 +34,12 @@ class SearchUseCaseTest {
     }
 
     @Test
-    fun `When search returns, then search results is the expected one`() {
-        whenever(searchRepositoryMock.search(SEARCH_TERM)).thenReturn(Single.just(searchResults))
+    fun `When search returns, then repository results is the expected one`() {
+        whenever(searchRepositoryMock.search(SEARCH_TERM)).thenReturn(Single.just(repositoryResults))
 
         val result = testedClass.buildUseCaseObservable(params).blockingGet()
 
-        assertThat(result).isEqualTo(searchResults)
+        assertThat(result).isEqualTo(repositoryResults)
     }
 
 }

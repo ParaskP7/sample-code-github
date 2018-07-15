@@ -6,9 +6,9 @@ import android.arch.lifecycle.Observer
 import com.nhaarman.mockito_kotlin.mock
 import com.nhaarman.mockito_kotlin.verify
 import com.nhaarman.mockito_kotlin.verifyZeroInteractions
-import io.petros.github.domain.model.search.SearchResults
+import io.petros.github.domain.model.search.RepositoryResults
 import io.petros.github.presentation.feature.common.list.adapter.AdapterStatus
-import io.petros.github.test.domain.TestSearchResultsProvider.Companion.provideSearchResults
+import io.petros.github.test.domain.TestSearchResultsProvider.Companion.provideRepositoryResults
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -19,10 +19,10 @@ class SearchSubscriberTest {
     @JvmField
     val rule = InstantTaskExecutorRule()
 
-    private val searchResults = provideSearchResults()
+    private val repositoryResults = provideRepositoryResults()
 
     private val statusObservableMock = mock<Observer<AdapterStatus>>()
-    private val resultsObservableMock = mock<Observer<SearchResults>>()
+    private val repositoriesObservableMock = mock<Observer<RepositoryResults>>()
 
     private lateinit var testedClass: SearchSubscriber
 
@@ -30,21 +30,21 @@ class SearchSubscriberTest {
     fun setUp() {
         testedClass = SearchSubscriber(MutableLiveData(), MutableLiveData())
         testedClass.statusObservable.observeForever(statusObservableMock)
-        testedClass.resultsObservable.observeForever(resultsObservableMock)
+        testedClass.repositoriesObservable.observeForever(repositoriesObservableMock)
     }
 
     @Test
     fun `When search succeeds, then an idle status is posted`() {
-        testedClass.onSuccess(searchResults)
+        testedClass.onSuccess(repositoryResults)
 
         verify(statusObservableMock).onChanged(AdapterStatus.IDLE)
     }
 
     @Test
-    fun `When search succeeds, then search results is posted`() {
-        testedClass.onSuccess(searchResults)
+    fun `When search succeeds, then repository results is posted`() {
+        testedClass.onSuccess(repositoryResults)
 
-        verify(resultsObservableMock).onChanged(searchResults)
+        verify(repositoriesObservableMock).onChanged(repositoryResults)
     }
 
     @Test
@@ -55,10 +55,10 @@ class SearchSubscriberTest {
     }
 
     @Test
-    fun `When search fails, then no search results is posted`() {
+    fun `When search fails, then no repository results is posted`() {
         testedClass.onError(Exception())
 
-        verifyZeroInteractions(resultsObservableMock)
+        verifyZeroInteractions(repositoriesObservableMock)
     }
 
 }

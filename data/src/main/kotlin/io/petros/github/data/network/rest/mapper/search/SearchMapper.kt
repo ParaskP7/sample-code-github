@@ -3,18 +3,18 @@ package io.petros.github.data.network.rest.mapper.search
 import io.petros.github.data.network.rest.response.search.Repo
 import io.petros.github.data.network.rest.response.search.SearchResultsResponse
 import io.petros.github.domain.model.search.Repository
-import io.petros.github.domain.model.search.SearchResults
+import io.petros.github.domain.model.search.RepositoryResults
 
 class SearchMapper { // MIT
 
     companion object {
 
-        internal fun transform(searchResultsResponse: SearchResultsResponse): SearchResults {
+        internal fun transform(searchResultsResponse: SearchResultsResponse): RepositoryResults {
             val repositories = arrayListOf<Repository>()
             for (repo in searchResultsResponse.items) {
                 repositories.add(repo.toRepository())
             }
-            return SearchResults(repositories)
+            return RepositoryResults(repositories)
         }
 
     }

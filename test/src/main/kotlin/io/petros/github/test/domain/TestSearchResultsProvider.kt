@@ -1,7 +1,7 @@
 package io.petros.github.test.domain
 
 import io.petros.github.domain.model.search.Repository
-import io.petros.github.domain.model.search.SearchResults
+import io.petros.github.domain.model.search.RepositoryResults
 import io.petros.github.test.domain.TestRepositoryProvider.Companion.provideRepository
 
 class TestSearchResultsProvider {
@@ -10,10 +10,10 @@ class TestSearchResultsProvider {
 
         const val SEARCH_TERM = "SEARCH_TERM"
 
-        fun provideSearchResults(
+        fun provideRepositoryResults(
             repositories: List<Repository> = arrayListOf(provideRepository(), provideRepository(), provideRepository())
-        ): SearchResults {
-            return SearchResults(
+        ): RepositoryResults {
+            return RepositoryResults(
                 repositories
             )
         }

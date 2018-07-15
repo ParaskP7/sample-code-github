@@ -1,5 +1,5 @@
 package io.petros.github.domain.model.search
 
-data class SearchResults(
+data class RepositoryResults(
     val repositories: List<Repository>
 )
