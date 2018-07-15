@@ -7,5 +7,6 @@ data class Repository(
     val ownerAvatar: String,
     val name: String,
     val description: String?,
-    val numberOfForks: Int
+    val numberOfForks: Int,
+    val subscribersUrl: String
 ) : Serializable

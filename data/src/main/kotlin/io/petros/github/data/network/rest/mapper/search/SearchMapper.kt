@@ -27,6 +27,7 @@ fun Repo.toRepository(): Repository {
         ownerAvatar = owner.avatar_url,
         name = name,
         description = description,
-        numberOfForks = forks_count
+        numberOfForks = forks_count,
+        subscribersUrl = subscribers_url
     )
 }
