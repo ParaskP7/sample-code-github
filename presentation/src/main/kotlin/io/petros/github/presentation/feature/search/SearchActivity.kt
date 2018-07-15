@@ -3,13 +3,16 @@ package io.petros.github.presentation.feature.search
 import android.arch.lifecycle.Observer
 import android.os.Bundle
 import io.petros.github.R
+import io.petros.github.domain.model.search.Repository
 import io.petros.github.presentation.feature.BaseActivity
 import io.petros.github.presentation.feature.common.toolbar.SearchToolbarCallback
 import io.petros.github.presentation.feature.search.list.RepositoryAdapter
+import io.petros.github.presentation.feature.search.listener.RepositoryCallback
 import kotlinx.android.synthetic.main.activity_search.*
+import timber.log.Timber
 
 @Suppress("TooManyFunctions")
-class SearchActivity : BaseActivity<SearchActivityViewModel>(), SearchToolbarCallback {
+class SearchActivity : BaseActivity<SearchActivityViewModel>(), SearchToolbarCallback, RepositoryCallback {
 
     private val adapter = RepositoryAdapter()
 
@@ -25,6 +28,7 @@ class SearchActivity : BaseActivity<SearchActivityViewModel>(), SearchToolbarCal
     }
 
     private fun initRecyclerView() {
+        adapter.callback = this
         recycler_view.adapter = adapter
     }
 
@@ -57,6 +61,12 @@ class SearchActivity : BaseActivity<SearchActivityViewModel>(), SearchToolbarCal
 
     private fun search(searchTerm: String) {
         viewModel.search(searchTerm)
+    }
+
+    /* NAVIGATION */
+
+    override fun onClick(repository: Repository) {
+        Timber.i("Repository clicked. [Repository: $repository]")
     }
 
     /* CONTRACT */

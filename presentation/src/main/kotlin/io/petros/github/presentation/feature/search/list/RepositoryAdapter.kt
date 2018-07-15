@@ -11,6 +11,7 @@ import io.petros.github.presentation.feature.common.list.holder.ErrorViewHolder
 import io.petros.github.presentation.feature.common.list.holder.ProgressViewHolder
 import io.petros.github.presentation.feature.common.list.item.ErrorItemView
 import io.petros.github.presentation.feature.common.list.item.ProgressItemView
+import io.petros.github.presentation.feature.search.listener.RepositoryCallback
 import io.petros.github.presentation.feature.search.view.RepositoryItemView
 import io.petros.github.presentation.feature.toast
 
@@ -32,6 +33,8 @@ class RepositoryAdapter(
             field = value
             notifyDataSetChanged()
         }
+
+    lateinit var callback: RepositoryCallback
 
     /* CONTEXT */
 
@@ -64,7 +67,7 @@ class RepositoryAdapter(
         context?.let {
             return when (viewType) {
                 VIEW_TYPE_PROGRESS -> ProgressViewHolder(ProgressItemView(it))
-                VIEW_TYPE_REPOSITORY -> RepositoryViewHolder(RepositoryItemView(it))
+                VIEW_TYPE_REPOSITORY -> RepositoryViewHolder(RepositoryItemView(it), callback)
                 VIEW_TYPE_ERROR -> ErrorViewHolder(ErrorItemView(it)) { it.toast(R.string.retry_loading) }
                 else -> throw IllegalArgumentException("View type out of range. [View Type: $viewType]")
             }

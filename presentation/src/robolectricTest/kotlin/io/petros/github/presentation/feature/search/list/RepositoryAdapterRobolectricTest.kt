@@ -36,6 +36,7 @@ class RepositoryAdapterRobolectricTest {
         allItems.addAll(currentItems)
 
         testedClass = RepositoryAdapter(allItems)
+        testedClass.callback = mock()
     }
 
     /* CONTEXT */
