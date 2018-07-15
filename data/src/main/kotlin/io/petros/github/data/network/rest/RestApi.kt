@@ -1,7 +1,7 @@
 package io.petros.github.data.network.rest
 
 import io.petros.github.data.network.rest.response.repository.RepoDetails
-import io.petros.github.data.network.rest.response.search.SearchResultsResponse
+import io.petros.github.data.network.rest.response.search.RepositoryResultsResponse
 import io.petros.github.data.network.rest.response.subscriber.Sub
 import io.reactivex.Single
 import retrofit2.http.GET
@@ -13,7 +13,7 @@ interface RestApi {
     @GET("search/repositories")
     fun searchRepositories(
         @Query("q") searchTerm: String
-    ): Single<SearchResultsResponse>
+    ): Single<RepositoryResultsResponse>
 
     @GET("repos/{login}/{name}")
     fun repositoryDetails(
