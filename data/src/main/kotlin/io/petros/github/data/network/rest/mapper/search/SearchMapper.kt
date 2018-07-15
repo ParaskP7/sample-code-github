@@ -23,6 +23,7 @@ class SearchMapper { // MIT
 
 fun Repo.toRepository(): Repository {
     return Repository(
+        id = id,
         ownerAvatar = owner.avatar_url,
         name = name,
         description = description,
