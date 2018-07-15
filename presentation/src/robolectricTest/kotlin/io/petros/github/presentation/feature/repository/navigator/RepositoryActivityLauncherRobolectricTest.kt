@@ -16,6 +16,12 @@ import org.robolectric.RobolectricTestRunner
 @RunWith(RobolectricTestRunner::class)
 class RepositoryActivityLauncherRobolectricTest {
 
+    companion object {
+
+        private const val EXTRA_REPOSITORY = "repository"
+
+    }
+
     private val repository = TestRepositoryProvider.provideRepository()
 
     private var appCompatActivityMock = mock<AppCompatActivity>()
@@ -35,6 +41,7 @@ class RepositoryActivityLauncherRobolectricTest {
 
         verify(appCompatActivityMock).startActivity(intentCaptor.capture())
         assertThat(intentCaptor.value.component.className).isEqualTo(RepositoryActivity::class.java.name)
+        assertThat(intentCaptor.value.extras.get(EXTRA_REPOSITORY)).isEqualTo(repository)
     }
 
 }
