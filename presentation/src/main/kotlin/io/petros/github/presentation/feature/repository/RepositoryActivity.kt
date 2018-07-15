@@ -10,7 +10,7 @@ import io.petros.github.presentation.feature.repository.list.SubscriberAdapter
 import kotlinx.android.synthetic.main.activity_repository.*
 
 @Suppress("TooManyFunctions")
-class RepositoryActivity : BaseActivity<RepositoryActivityViewModel>() {
+class RepositoryActivity : BaseActivity<RepositoryActivityViewModel>() { // MET
 
     @InjectExtra lateinit var repository: Repository
 

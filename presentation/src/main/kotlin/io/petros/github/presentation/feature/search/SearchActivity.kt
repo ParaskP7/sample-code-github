@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_search.*
 import javax.inject.Inject
 
 @Suppress("TooManyFunctions")
-class SearchActivity : BaseActivity<SearchActivityViewModel>(), SearchToolbarCallback, RepositoryCallback {
+class SearchActivity : BaseActivity<SearchActivityViewModel>(), SearchToolbarCallback, RepositoryCallback { // MET
 
     @Inject lateinit var searchNavigator: SearchNavigator
 
