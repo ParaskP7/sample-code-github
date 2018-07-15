@@ -11,6 +11,8 @@
 
     <style name="SearchToolbarEditText">
         <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
         <item name="android:inputType">text</item>
         <item name="android:maxLength">30</item>
         <item name="android:maxLines">1</item>
