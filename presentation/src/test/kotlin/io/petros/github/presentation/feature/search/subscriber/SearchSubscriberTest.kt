@@ -22,7 +22,7 @@ class SearchSubscriberTest {
     private val searchResults = provideSearchResults()
 
     private val statusObservableMock = mock<Observer<AdapterStatus>>()
-    private val searchResultsObservableMock = mock<Observer<SearchResults>>()
+    private val resultsObservableMock = mock<Observer<SearchResults>>()
 
     private lateinit var testedClass: SearchSubscriber
 
@@ -30,7 +30,7 @@ class SearchSubscriberTest {
     fun setUp() {
         testedClass = SearchSubscriber(MutableLiveData(), MutableLiveData())
         testedClass.statusObservable.observeForever(statusObservableMock)
-        testedClass.resultsObservable.observeForever(searchResultsObservableMock)
+        testedClass.resultsObservable.observeForever(resultsObservableMock)
     }
 
     @Test
@@ -44,7 +44,7 @@ class SearchSubscriberTest {
     fun `When search succeeds, then search results is posted`() {
         testedClass.onSuccess(searchResults)
 
-        verify(searchResultsObservableMock).onChanged(searchResults)
+        verify(resultsObservableMock).onChanged(searchResults)
     }
 
     @Test
@@ -58,7 +58,7 @@ class SearchSubscriberTest {
     fun `When search fails, then no search results is posted`() {
         testedClass.onError(Exception())
 
-        verifyZeroInteractions(searchResultsObservableMock)
+        verifyZeroInteractions(resultsObservableMock)
     }
 
 }
