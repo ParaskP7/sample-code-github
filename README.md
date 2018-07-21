@@ -22,7 +22,7 @@ Below is a list of skills that are showcased:
     2. [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) ```(Model View ViewModel)```
     3. [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) ```(Architecture Components 
     ViewModel Class)```
-    4. [LivaData](https://developer.android.com/topic/libraries/architecture/livedata) ```(Architecture Components 
+    4. [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) ```(Architecture Components 
     LiveData Class)```
 2. Libraries
     1. [Dagger](https://github.com/google/dagger) ```(A fast dependency injector for Android and Java)```
