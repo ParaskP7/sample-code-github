@@ -43,7 +43,7 @@ Below is a list of skills that are showcased:
     rounded corner background and shadow)```
     3. [Recycler View](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html) ```(A flexible 
     view for providing a limited window into a large data set)```
-    4. [Shared Element Transition](https://developer.android.com/training/material/animations.html#Transitions) ```(Activity 
+    4. [Shared Element Transitions](https://developer.android.com/training/material/animations.html#Transitions) ```(Activity 
     transitions in material design apps provide visual connections between different states through motion and 
     transformations between common elements)```
 4. Code Quality
