@@ -22,7 +22,7 @@ Below is a list of skills that are showcased:
     2. [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) ```(Model View ViewModel)```
     3. [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) ```(Architecture Components 
     ViewModel Class)```
-    4. [LivaData](https://developer.android.com/topic/libraries/architecture/livedata) ```(Architecture Components 
+    4. [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) ```(Architecture Components 
     LiveData Class)```
 2. Libraries
     1. [Dagger](https://github.com/google/dagger) ```(A fast dependency injector for Android and Java)```
@@ -43,7 +43,7 @@ Below is a list of skills that are showcased:
     rounded corner background and shadow)```
     3. [Recycler View](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html) ```(A flexible 
     view for providing a limited window into a large data set)```
-    4. [Shared Element Transition](https://developer.android.com/training/material/animations.html#Transitions) ```(Activity 
+    4. [Shared Element Transitions](https://developer.android.com/training/material/animations.html#Transitions) ```(Activity 
     transitions in material design apps provide visual connections between different states through motion and 
     transformations between common elements)```
 4. Code Quality
