@@ -67,6 +67,10 @@ Below is a list of skills that are showcased:
     2. [Dexcount Gradle](https://github.com/KeepSafe/dexcount-gradle-plugin) ```(A Gradle plugin to report the number of 
     method references in your APK on every build)```
 
+# Screenshots
+
+![alt tag](https://github.com/ParaskP7/sample-code-github/blob/master/demo.png)
+
 # Usage
 
 Use the below command to build the project in order to install it on an Android device for demonstration:
